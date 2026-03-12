@@ -1,6 +1,6 @@
 {
-  "name": "electron-app",
-  "productName": "electron-app",
+  "name": "electron-vue-template",
+  "productName": "electron-vue-template",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
@@ -10,11 +10,14 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "eslint src --ext .js,.vue",
+    "lint:fix": "eslint src --ext .js,.vue --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
   "author": {
-    "name": "滕锦华",
+    "name": "tengjinhua",
     "email": "903013546@qq.com"
   },
   "license": "MIT",
@@ -28,8 +31,15 @@
     "@electron-forge/plugin-fuses": "^7.11.1",
     "@electron-forge/plugin-vite": "^7.11.1",
     "@electron/fuses": "^1.8.0",
+    "@eslint/js": "^10.0.1",
     "@vitejs/plugin-vue": "^6.0.4",
+    "@vue/eslint-config-prettier": "^10.2.0",
     "electron": "41.0.0",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.8.0",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
     "vite": "^5.4.21"
   },
   "dependencies": {
