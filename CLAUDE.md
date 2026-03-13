@@ -60,6 +60,7 @@ This is an Electron application using Vue 3 as the frontend framework. The proje
   - Integrates with Prettier for consistent formatting
 - **Husky**: Git hooks manager for pre-commit checks
 - **lint-staged**: Run linters on git staged files only
+- **commitlint**: Validates commit messages follow conventional commit format
 - Configuration files (all in CommonJS format to support ES Module environment):
   - ESLint: `eslint.config.cjs`
   - Prettier: `.prettierrc.cjs`
@@ -81,11 +82,11 @@ Pre-commit hooks automatically run on git commit:
 - **ESLint**: Auto-fix JavaScript/Vue files
 - **Stylelint**: Auto-fix CSS/Vue styles
 - **Prettier**: Format all supported files
-- **commit-msg**: Validates commit message format (requires format: `type: description`)
+- **commit-msg**: Validates commit message format using commitlint
 
 ### Commit Message Format
 
-Use conventional commits format:
+Uses commitlint with conventional commits format:
 
 - `feat:` New features
 - `fix:` Bug fixes
@@ -94,3 +95,15 @@ Use conventional commits format:
 - `refactor:` Code refactoring
 - `test:` Test additions or changes
 - `chore:` Build/tooling changes
+- `perf:` Performance improvements
+- `build:` Build system changes
+- `ci:` CI configuration changes
+- `revert:` Revert previous commits
+
+Rules enforced by commitlint:
+
+- Type must be lowercase and from the allowed list
+- Subject cannot be empty
+- Subject max length: 100 characters
+- Subject cannot end with a period
+- Body lines max length: 100 characters
