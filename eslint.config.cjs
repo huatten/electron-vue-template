@@ -1,9 +1,9 @@
-import js from '@eslint/js'
-import vuePlugin from 'eslint-plugin-vue'
-import prettierConfig from 'eslint-config-prettier'
-import globals from 'globals'
+const js = require('@eslint/js');
+const vuePlugin = require('eslint-plugin-vue');
+const prettierConfig = require('eslint-config-prettier');
+const globals = require('globals');
 
-export default [
+module.exports = [
   js.configs.recommended,
   ...vuePlugin.configs['flat/recommended'],
   prettierConfig,
@@ -33,4 +33,4 @@ export default [
       },
     },
   },
-]
+];
