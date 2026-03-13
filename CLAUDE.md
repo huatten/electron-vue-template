@@ -15,6 +15,8 @@ This is an Electron application using Vue 3 as the frontend framework. The proje
 - **Create distributables**: `npm run make` - Creates distributables for all configured platforms
 - **Lint**: `npm run lint` - Runs ESLint on src directory
 - **Lint fix**: `npm run lint:fix` - Runs ESLint and auto-fix issues
+- **Lint style**: `npm run lint:style` - Runs Stylelint on CSS and Vue files
+- **Lint style fix**: `npm run lint:style:fix` - Runs Stylelint and auto-fix style issues
 - **Format**: `npm run format` - Formats code with Prettier
 - **Format check**: `npm run format:check` - Checks code formatting
 
@@ -51,7 +53,16 @@ This is an Electron application using Vue 3 as the frontend framework. The proje
 
 - **ESLint**: Configured with Vue 3 and Prettier support, checks src directory
 - **Prettier**: Code formatter with 2-space indentation, single quotes, semicolons
-- Configuration files: `eslint.config.js`, `.prettierrc.js`, `.prettierignore`
+- **Stylelint**: CSS/Vue style linter with standard rules and property ordering
+  - Enforces property ordering (powered by stylelint-config-recess-order)
+  - Validates CSS syntax and best practices
+  - Supports Vue SFC `<style>` blocks
+  - Integrates with Prettier for consistent formatting
+- Configuration files:
+  - ESLint: `eslint.config.js`
+  - Prettier: `.prettierrc.js`
+  - Stylelint: `stylelint.config.js`
+  - Ignore files: `.prettierignore`, `.stylelintignore`
 
 ## Environment Requirements
 
