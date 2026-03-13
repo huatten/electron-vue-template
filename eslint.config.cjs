@@ -1,7 +1,7 @@
-const js = require('@eslint/js');
-const vuePlugin = require('eslint-plugin-vue');
-const prettierConfig = require('eslint-config-prettier');
-const globals = require('globals');
+const js = require('@eslint/js')
+const vuePlugin = require('eslint-plugin-vue')
+const prettierConfig = require('eslint-config-prettier')
+const globals = require('globals')
 
 module.exports = [
   js.configs.recommended,
@@ -33,4 +33,4 @@ module.exports = [
       },
     },
   },
-];
+]

@@ -60,12 +60,13 @@ This is an Electron application using Vue 3 as the frontend framework. The proje
   - Integrates with Prettier for consistent formatting
 - **Husky**: Git hooks manager for pre-commit checks
 - **lint-staged**: Run linters on git staged files only
-- Configuration files:
+- Configuration files (all in CommonJS format to support ES Module environment):
   - ESLint: `eslint.config.cjs`
-  - Prettier: `.prettierrc.js`
-  - Stylelint: `stylelint.config.js`
+  - Prettier: `.prettierrc.cjs`
+  - Stylelint: `stylelint.config.cjs`
   - Ignore files: `.prettierignore`, `.stylelintignore`
   - Git hooks: `.husky/`
+- **Package.json**: Uses `"type": "module"` for ES Module support
 
 ## Environment Requirements
 
