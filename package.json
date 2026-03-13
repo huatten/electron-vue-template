@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "electron-forge start",
@@ -12,10 +13,10 @@
     "publish": "electron-forge publish",
     "lint": "eslint src --ext .js,.vue --config eslint.config.cjs",
     "lint:fix": "eslint src --ext .js,.vue --fix --config eslint.config.cjs",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint:style": "stylelint \"**/*.{css,vue}\"",
-    "lint:style:fix": "stylelint \"**/*.{css,vue}\" --fix",
+    "format": "prettier --write . --config .prettierrc.cjs",
+    "format:check": "prettier --check . --config .prettierrc.cjs",
+    "lint:style": "stylelint \"**/*.{css,vue}\" --config stylelint.config.cjs",
+    "lint:style:fix": "stylelint \"**/*.{css,vue}\" --fix --config stylelint.config.cjs",
     "lint:all": "npm run lint && npm run lint:style",
     "lint:all:fix": "npm run lint:fix && npm run lint:style:fix",
     "prepare": "husky"

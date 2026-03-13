@@ -58,13 +58,38 @@ This is an Electron application using Vue 3 as the frontend framework. The proje
   - Validates CSS syntax and best practices
   - Supports Vue SFC `<style>` blocks
   - Integrates with Prettier for consistent formatting
+- **Husky**: Git hooks manager for pre-commit checks
+- **lint-staged**: Run linters on git staged files only
 - Configuration files:
-  - ESLint: `eslint.config.js`
+  - ESLint: `eslint.config.cjs`
   - Prettier: `.prettierrc.js`
   - Stylelint: `stylelint.config.js`
   - Ignore files: `.prettierignore`, `.stylelintignore`
+  - Git hooks: `.husky/`
 
 ## Environment Requirements
 
 - **Node.js**: >= 22.0.0 (enforced via package.json engines field)
 - **Version Manager Files**: `.nvmrc` and `.node-version` for automatic version switching
+
+## Git Hooks (Husky)
+
+Pre-commit hooks automatically run on git commit:
+
+- **lint-staged**: Runs linters only on staged files
+- **ESLint**: Auto-fix JavaScript/Vue files
+- **Stylelint**: Auto-fix CSS/Vue styles
+- **Prettier**: Format all supported files
+- **commit-msg**: Validates commit message format (requires format: `type: description`)
+
+### Commit Message Format
+
+Use conventional commits format:
+
+- `feat:` New features
+- `fix:` Bug fixes
+- `docs:` Documentation changes
+- `style:` Code style changes (formatting, etc)
+- `refactor:` Code refactoring
+- `test:` Test additions or changes
+- `chore:` Build/tooling changes
