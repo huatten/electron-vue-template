@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is an Electron application using Vue 3 as the frontend framework. The project is configured with Electron Forge and Vite for building and development.
 
+**Node.js Version Requirement**: Node.js >= 22.0.0 (specified in package.json engines)
+
 ## Key Commands
 
 - **Start development server**: `npm start` - Runs the Electron app in development mode with hot reload
@@ -49,4 +51,9 @@ This is an Electron application using Vue 3 as the frontend framework. The proje
 
 - **ESLint**: Configured with Vue 3 and Prettier support, checks src directory
 - **Prettier**: Code formatter with 2-space indentation, single quotes, semicolons
-- Configuration files: `eslint.config.js`, `.prettierrc`, `.prettierignore`
+- Configuration files: `eslint.config.js`, `.prettierrc.js`, `.prettierignore`
+
+## Environment Requirements
+
+- **Node.js**: >= 22.0.0 (enforced via package.json engines field)
+- **Version Manager Files**: `.nvmrc` and `.node-version` for automatic version switching
