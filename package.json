@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
-  "type": "module",
   "private": true,
   "scripts": {
     "start": "electron-forge start",
@@ -19,12 +18,18 @@
     "lint:style:fix": "stylelint \"**/*.{css,vue}\" --fix --config stylelint.config.cjs",
     "lint:all": "npm run lint && npm run lint:style",
     "lint:all:fix": "npm run lint:fix && npm run lint:style:fix",
+    "commit": "git add -A && git cz && git push",
     "prepare": "husky"
   },
   "keywords": [],
   "author": {
     "name": "tengjinhua",
     "email": "903013546@qq.com"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   },
   "license": "MIT",
   "engines": {
@@ -45,6 +50,8 @@
     "@eslint/js": "^10.0.1",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-prettier": "^10.2.0",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
     "electron": "41.0.0",
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",

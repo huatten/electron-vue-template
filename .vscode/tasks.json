@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "group": "build",
+      "label": "npm: start",
+      "detail": "Run Electron application"
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "group": "test",
+      "label": "npm: lint",
+      "detail": "Run ESLint"
+    },
+    {
+      "type": "npm",
+      "script": "lint:fix",
+      "group": "test",
+      "label": "npm: lint:fix",
+      "detail": "Run ESLint with fix"
+    },
+    {
+      "type": "npm",
+      "script": "format",
+      "group": "build",
+      "label": "npm: format",
+      "detail": "Format code with Prettier"
+    },
+    {
+      "type": "npm",
+      "script": "package",
+      "group": "build",
+      "label": "npm: package",
+      "detail": "Package Electron application"
+    },
+    {
+      "type": "npm",
+      "script": "make",
+      "group": "build",
+      "label": "npm: make",
+      "detail": "Create distributables"
+    },
+    {
+      "type": "npm",
+      "script": "debug",
+      "problemMatcher": [],
+      "label": "npm: debug",
+      "detail": "electron-forge start -- --remote-debugging-port=9222"
+    }
+  ]
+}
